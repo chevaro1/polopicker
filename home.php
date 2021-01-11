@@ -5,15 +5,15 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <?php include('head.php') ?>
-   
+        <?php include('blocks/head.php') ?>
+
 	</head>
 	<body>
-		
+
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
-		<?php include('header.php') ?>
+		<?php include('blocks/header.php') ?>
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
@@ -106,17 +106,17 @@
 			</div>
 		</div>
 
-		
 
-		<?php include ("partners.php") ?>
 
-		<?php include ("footer.php") ?>
+		<?php include ("blocks/partners.php") ?>
+
+		<?php include ("blocks/footer.php") ?>
 	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
    <!-- popper -->
@@ -143,4 +143,3 @@
 
 	</body>
 </html>
-
