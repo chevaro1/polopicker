@@ -53,23 +53,23 @@ if($boo){
 								<li class="has-dropdown active">
 									<a href="../home/player.php">the player</a>
 									<ul class="dropdown">
-                                                                            <li><a href="../productkneepads.php">Kneepads</a></li>
-                                                                                <li><a href="mallets.php">Mallets</a></li>
-                                                                                <li><a href="gloves.php">Gloves</a></li>
-                                                                                <li><a href="helmets.php">Helmets</a></li>
-										<li><a href="boots.php">Boots</a></li>
-                                                                                <li><a href="whites.php">Whites</a></li>
+                    <li><a href="../productkneepads.php">Kneepads</a></li>
+                    <li><a href="../options/mallet_options.php">Mallets</a></li>
+                    <li><a href="../product/product.php?prod=glove">Gloves</a></li>
+                    <li><a href="../options/helmet_options.php">Helmets</a></li>
+										<li><a href="../product/product.php?prod=poloboot">Boots</a></li>
+                    <li><a href="../product/product.php?prod=trousers">Whites</a></li>
 									</ul>
 								</li>
                                                                 <li class="has-dropdown active">
 									<a href="../home/pony.php">the pony</a>
 									<ul class="dropdown">
-                                                                            <li><a href="saddle.php">Saddles</a></li>
-                                                                            <li><a href="bridles.php">Bridles</a></li>
-                                                                            <li><a href="bandages.php">Bandages</a></li>
-                                                                            <li><a href="horseboots.php">Boots</a></li>
-                                                                            <li><a href="headcollar.php">Headcollars</a></li>
-                                                                            <li><a href="rugs.php">Rugs</a></li>
+                   <li><a href="../options/saddle_options.php">Saddles</a></li>
+                   <li><a href="../product/product.php?prod=bridle">Bridles</a></li>
+                   <li><a href="../product/product.php?prod=bandages">Bandages</a></li>
+                   <li><a href="../options/horseboots_options.php">Boots</a></li>
+                   <li><a href="../product/product.php?prod=headcollar">Headcollars</a></li>
+                   <li><a href="../product/product.php?prod=rug">Rugs</a></li>
 									</ul>
 								</li>
 								<!--<li><a href="">the pets</a></li> -->
