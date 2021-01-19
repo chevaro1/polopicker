@@ -35,7 +35,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polo_kneepads.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Full size mallets</h2>
-								<p><a href="../product/mallets.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=mallet" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polomallet.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Mallet Extras</h2>
-								<p><a href="../product/mallet_extra.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=mallet_accessories" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>

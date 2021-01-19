@@ -43,7 +43,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_bridle.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Bridles</h2>
-								<p><a href="../options/bridles.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=bridle" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_bandage.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Bandages</h2>
-								<p><a href="../options/bandages.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=bandage" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -74,7 +74,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_headcollar.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Headcollars</h2>
-								<p><a href="../options/headcollar.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=headcollar" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_rug.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Rugs</h2>
-								<p><a href="../options/rugs.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=rug" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>

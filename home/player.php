@@ -50,7 +50,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polo-gloves.png);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Gloves</h2>
-								<p><a href="../product/gloves.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=glove" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -73,7 +73,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/poloboot.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Boots</h2>
-								<p><a href="../product/boots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=poloboot" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polobreeches.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Breeches</h2>
-								<p><a href="../product/breeches.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=breeches" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -96,7 +96,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polo_balls.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Balls</h2>
-								<p><a href="../product/balls.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=ball" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -104,7 +104,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/bag.png);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Kit Bags</h2>
-								<p><a href="../product/kit_bags.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=kit_bags" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -112,7 +112,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/whips.jpeg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">whips</h2>
-								<p><a href="../product/whips.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=whip" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -127,7 +127,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">glasses</h2>
-								<p><a href="../product/glasses.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=glasses" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>

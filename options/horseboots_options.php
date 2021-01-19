@@ -35,7 +35,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_boots.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">All Boots</h2>
-                                                                <p><a href="horseboots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+                <p><a href="../product/product.php?prod=boot" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_boots.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Skid Boots</h2>
-								<p><a href="../product/skidboots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=skid_boot&type=true" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_boots.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Sports Boots</h2>
-								<p><a href="../product/sportsboots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=sports_boot&type=true" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
                                                     <div class="featured">
                                                             <div class="featured-img featured-img-2" style="background-image: url(../images/horse_boots.jpg);">
                                                                     <h2 style="background-color: #88c8bc; border-radius: 25px">Over Reach Boots</h2>
-                                                                    <p><a href="overreachboots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+                                                                    <p><a href="../product/product.php?prod=over_reach&type=true" class="btn btn-primary btn-lg">Shop now</a></p>
                                                             </div>
                                                     </div>
                                             </div>
@@ -73,7 +73,7 @@
                                                     <div class="featured">
                                                             <div class="featured-img featured-img-2" style="background-image: url(../images/horse_boots.jpg);">
                                                                     <h2 style="background-color: #88c8bc; border-radius: 25px">Tendon Boots</h2>
-                                                                    <p><a href="tendonboots.php" class="btn btn-primary btn-lg">Shop now</a></p>
+                                                                    <p><a href="../product/product.php?prod=tendon_boot&type=true" class="btn btn-primary btn-lg">Shop now</a></p>
                                                             </div>
                                                     </div>
                                             </div>

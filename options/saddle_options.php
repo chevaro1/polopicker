@@ -35,7 +35,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/Polo_Saddles.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Saddles</h2>
-								<p><a href="../product/saddle.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=saddle" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polomallet.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Saddle pads</h2>
-								<p><a href="../product/saddle_extra.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=saddle_accessories" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>

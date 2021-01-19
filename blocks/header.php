@@ -49,11 +49,11 @@ if($boo){
 					<div class="row">
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
-								<li><a href="home.php">Home</a></li>
+								<li><a href="../home/home.php">Home</a></li>
 								<li class="has-dropdown active">
-									<a href="player.php">the player</a>
+									<a href="../home/player.php">the player</a>
 									<ul class="dropdown">
-                                                                            <li><a href="kneepads.php">Kneepads</a></li>
+                                                                            <li><a href="../productkneepads.php">Kneepads</a></li>
                                                                                 <li><a href="mallets.php">Mallets</a></li>
                                                                                 <li><a href="gloves.php">Gloves</a></li>
                                                                                 <li><a href="helmets.php">Helmets</a></li>
@@ -62,7 +62,7 @@ if($boo){
 									</ul>
 								</li>
                                                                 <li class="has-dropdown active">
-									<a href="pony.php">the pony</a>
+									<a href="../home/pony.php">the pony</a>
 									<ul class="dropdown">
                                                                             <li><a href="saddle.php">Saddles</a></li>
                                                                             <li><a href="bridles.php">Bridles</a></li>
@@ -73,7 +73,7 @@ if($boo){
 									</ul>
 								</li>
 								<!--<li><a href="">the pets</a></li> -->
-								<li><a href="about.php">about</a></li>
+								<li><a href="../home/about.php">about</a></li>
 								<!-- <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li> -->
 							</ul>
 						</div>

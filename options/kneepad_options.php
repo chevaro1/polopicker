@@ -35,7 +35,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(images/Polo_Kneepads.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Kneepads</h2>
-								<p><a href="../product/kneepads.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=kneepad" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(images/polomallet.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Kneepad Accessories</h2>
-								<p><a href="../product/kneepad_extra.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=kneepad_accessories" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
