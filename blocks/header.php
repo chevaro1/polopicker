@@ -61,7 +61,7 @@ if($boo){
                     <li><a href="../product/product.php?prod=trousers">Whites</a></li>
 									</ul>
 								</li>
-                                                                <li class="has-dropdown active">
+                <li class="has-dropdown active">
 									<a href="../home/pony.php">the pony</a>
 									<ul class="dropdown">
                    <li><a href="../options/saddle_options.php">Saddles</a></li>
