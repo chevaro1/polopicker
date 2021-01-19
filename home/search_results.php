@@ -10,15 +10,15 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<?php include('head.php') ?>
+	<?php include('../blocks/head.php') ?>
 
 	</head>
         <body onload="init()">
-		
+
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
-		<?php include('header.php') ?>
+		<?php include('../blocks/header.php') ?>
 
 		<div class="breadcrumbs">
 			<div class="container">
@@ -34,7 +34,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="breadcrumbs-img" style="background-image: url(images/playerandpony1.jpg);">
+						<div class="breadcrumbs-img" style="background-image: url(../images/playerandpony1.jpg);">
                                                     <h2><span style="background-color: #88c8bc; border-radius: 15px">search results</span></h2>
 						</div>
 						<div class="menu text-center">
@@ -52,7 +52,7 @@
 					<div class="col-lg-3 col-xl-3">
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="side border mb-1" id="brand">   
+								<div class="side border mb-1" id="brand">
 								</div>
 							</div>
 						<!--	<div class="col-sm-12">
@@ -106,7 +106,7 @@
 						</div>
 					</div>
 					<div class="col-lg-9 col-xl-9">
-						<div class="row row-pb-md" id="id01">                                                        
+						<div class="row row-pb-md" id="id01">
 						</div>
 						<?php #include ("page_numbers.php") ?>
 					</div>
@@ -114,50 +114,50 @@
 			</div>
 		</div>
 
-		<?php include ("partners.php") ?>
+		<?php include ("../blocks/partners.php") ?>
 
-		<?php include ("footer.php") ?>
+		<?php include ("../blocks/footer.php") ?>
 	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
    <!-- popper -->
-   <script src="js/popper.min.js"></script>
+   <script src="../js/popper.min.js"></script>
    <!-- bootstrap 4.1 -->
-   <script src="js/bootstrap.min.js"></script>
+   <script src="../js/bootstrap.min.js"></script>
    <!-- jQuery easing -->
-   <script src="js/jquery.easing.1.3.js"></script>
+   <script src="../js/jquery.easing.1.3.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="../js/jquery.flexslider-min.js"></script>
 	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/magnific-popup-options.js"></script>
 	<!-- Date Picker -->
-	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
 	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
-        
+	<script src="../js/main.js"></script>
+
         <script>
-            
+
             var product = "<?php echo $_GET["term"] ?>";
             var pagename = "helmets.php";
-            
+
             printAll();
-           
+
  <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ALL ITEMS                THIS IS THE CALL THAT RETURNS ALL ITEMS WITHOUT FILTERS -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->           
-            
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
             function printAll(){
                 var xmlhttp = new XMLHttpRequest();
                 var url = "search_items.php";
@@ -173,7 +173,7 @@
                 };
                 xmlhttp.open("GET", url+param, true);
                 xmlhttp.send();
-            }    
+            }
 
             function myFunction(arr) {
                 console.log("myFunction called");
@@ -185,24 +185,24 @@
                          '<div class=\"desc\">' +
                          '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
                          '</div>' +
-                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' + 
+                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
                          '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-                         '</a>' + 
+                         '</a>' +
                          '<div class=\"desc\">' +
                          '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
                          '<span class=\"price\">' + arr[i].price +'</span>' +
                          '</div>' +
                          '</div>' +
                          '</div>';
-                          
+
                 }
                 document.getElementById("id01").innerHTML = out;
             }
-            
+
  <!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- BRAND                THIS IS THE CALL TO THE BRAND FILTER WHICH RETURNS THE PRODUCT BRANDS                                                 -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->            
-            
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
             var xmlhttp = new XMLHttpRequest();
             var url = "get_brand.php";
             var param = "?cat=" + product;
@@ -217,8 +217,8 @@
             };
             xmlhttp.open("GET", url+param, true);
             xmlhttp.send();
-            
-            
+
+
             function printBrands(arr) {
                 console.log("print brands called");
                 var out = "";
@@ -234,16 +234,16 @@
                     } else{
                             out +=  '<li><a href="javascript:filter(\'brand\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
                         }
-                          
+
                 }
                 out += '</ul>';
                 document.getElementById("brand").innerHTML = out;
             }
-            
+
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- SELLER                THIS IS THE CALL TO THE SELLER FILTER WHICH RETURNS THE PRODUCT SELLERS                              -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            
+
             var xmlhttp = new XMLHttpRequest();
             var url = "get_seller.php";
             var param = "?cat=" + product;
@@ -258,7 +258,7 @@
             };
             xmlhttp.open("GET", url+param, true);
             xmlhttp.send();
-            
+
             function printseller(arr) {
                 console.log("print seller called");
                 var out = "";
@@ -269,7 +269,7 @@
                 for(i = 0; i < arr.length; i++) {
                     out +=  '<li><a href="javascript:filter(\'website\',\'' + arr[i].name + '\',\'' + product + '\')">' + arr[i].name + '</a></li>';
                     //out +=  '<li><a>' + arr[i].name + '</a></li>';
-                          
+
                 }
                 out += '</ul>';
                 document.getElementById("seller").innerHTML = out;
@@ -278,7 +278,7 @@
  <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- COLOUR                THIS IS THE CALL TO THE COLOUR FILTER WHICH RETURNS THE PRODUCT COLOURS                                                  -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-            
+
             var xmlhttp = new XMLHttpRequest();
             var url = "get_colour.php";
             var param = "?cat=" + product;
@@ -293,7 +293,7 @@
             };
             xmlhttp.open("GET", url+param, true);
             xmlhttp.send();
-            
+
             function printcolour(arr) {
                 console.log("print colour called");
                 var out = "";
@@ -306,12 +306,12 @@
                          out +=  '<li><a href="javascript:filter(\'colour\',\'unknown\',\'' + product +'\')">' + arr[i].name + '</a></li>';
                     } else{
                             out +=  '<li><a href="javascript:filter(\'colour\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
-                        }     
+                        }
                 }
                 out += '</ul>';
                 document.getElementById("colour").innerHTML = out;
             }
-            
+
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- product Range                THIS IS THE CALL TO THE product range FILTER WHICH RETURNS THE TYPES OF PRODUCT WITHIN THE CATEGORY                              -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -330,7 +330,7 @@
             };
             xmlhttp.open("GET", url+param, true);
             xmlhttp.send();
-            
+
             function printproduct(arr) {
                 console.log("print product range called");
                 var out = "";
@@ -343,14 +343,14 @@
                          out +=  '<li><a href="javascript:filter(\'product\',\'unknown\',\'' + product +'\')">' + arr[i].name + '</a></li>';
                     } else{
                             out +=  '<li><a href="javascript:filter(\'product\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
-                        }     
+                        }
                 }
                 out += '</ul>';
                 document.getElementById("product").innerHTML = out;
             }
-         
-         
-         
+
+
+
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- Gender                THIS IS THE CALL TO THE gender FILTER WHICH RETURNS THE whether the product is for men/women/children                              -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -369,7 +369,7 @@
             };
             xmlhttp.open("GET", url+param, true);
             xmlhttp.send();
-            
+
             function printgender(arr) {
                 console.log("print gender called");
                 var out = "";
@@ -382,18 +382,18 @@
                          out +=  '<li><a href="javascript:filter(\'gender\',\'unknown\',\'' + product +'\')">' + arr[i].name + '</a></li>';
                     } else{
                             out +=  '<li><a href="javascript:filter(\'gender\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
-                        }     
+                        }
                 }
                 out += '</ul>';
                 document.getElementById("gender").innerHTML = out;
-            }      
-         
-         
-         
+            }
+
+
+
  <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!--                THIS IS THE CALL TO THE FILTER WHICH RETURNS THE FILTERED PRODUCTS                                                                  -->
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
-           
+
             function filter(col, filter, cat){
                 var xmlhttp = new XMLHttpRequest();
                 var url = "filter_items.php";
@@ -410,7 +410,7 @@
                 xmlhttp.open("GET", url+param, true);
                 xmlhttp.send();
             }
-            
+
             function printfilter(arr) {
                 console.log("print filter called");
                 var out = "";
@@ -421,22 +421,21 @@
                          '<div class=\"desc\">' +
                          '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
                          '</div>' +
-                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' + 
+                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
                          '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-                         '</a>' + 
+                         '</a>' +
                          '<div class=\"desc\">' +
                          '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
                          '<span class=\"price\">' + arr[i].price +'</span>' +
                          '</div>' +
                          '</div>' +
                          '</div>';
-                          
+
                 }
                 document.getElementById("id01").innerHTML = out;
             }
-            
+
         </script>
-        
+
 	</body>
 </html>
-

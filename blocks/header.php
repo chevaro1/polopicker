@@ -11,7 +11,7 @@ if(isset($_POST["term"])){
 }
 
 if($boo){
-    
+
     #$term = trim($_POST["term"]);
     #$term = str_replace(' ', '', $term);
     $boo = false;
@@ -19,15 +19,15 @@ if($boo){
     session_start();
 
     $_SESSION["search_term"] = $term;
-    
+
     header("location: search_results.php?term=$term");
-        
+
     exit;
-    
-    
-        
+
+
+
 }
-        
+
 
 ?>
 <nav class="colorlib-nav" role="navigation">
@@ -80,5 +80,5 @@ if($boo){
 					</div>
 				</div>
 			</div>
-			<?php include('header_banner.php') ?>
+			<?php include('../blocks/header_banner.php') ?>
 		</nav>
