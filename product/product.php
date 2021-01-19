@@ -9,6 +9,7 @@ $js = '<script src="../js/product.js"></script>';
 if ($type == "true"){
   $js = '<script src="../js/productbp.js"></script>';
 }
+$product = str_replace("-", " ", $product);
 
 ?>
 

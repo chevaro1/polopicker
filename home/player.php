@@ -81,7 +81,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polobreeches.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Breeches</h2>
-								<p><a href="../product/product.php?prod=breeches" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=trousers" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
@@ -104,7 +104,7 @@
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/bag.png);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Kit Bags</h2>
-								<p><a href="../product/product.php?prod=kit_bags" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../product/product.php?prod=bag" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>

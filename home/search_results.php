@@ -160,7 +160,7 @@
 
             function printAll(){
                 var xmlhttp = new XMLHttpRequest();
-                var url = "search_items.php";
+                var url = "../sql/search_items.php";
                 var param = "?prod=" + product;
 
                 console.log("get data script running");
@@ -204,7 +204,7 @@
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "get_brand.php";
+            var url = "../sql/get_brand.php";
             var param = "?cat=" + product;
 
             console.log("getting brand");
@@ -245,7 +245,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "get_seller.php";
+            var url = "../sql/get_seller.php";
             var param = "?cat=" + product;
 
             console.log("getting seller");
@@ -280,7 +280,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "get_colour.php";
+            var url = "../sql/get_colour.php";
             var param = "?cat=" + product;
 
             console.log("getting colour");
@@ -317,7 +317,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "get_product_range.php";
+            var url = "../sql/get_product_range.php";
             var param = "?cat=" + product;
 
             console.log("getting product range");
@@ -356,7 +356,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "get_gender.php";
+            var url = "../sql/get_gender.php";
             var param = "?cat=" + product;
 
             console.log("getting gender");
@@ -396,7 +396,7 @@
 
             function filter(col, filter, cat){
                 var xmlhttp = new XMLHttpRequest();
-                var url = "filter_items.php";
+                var url = "../sql/filter_items.php";
                 var param = "?cat=" + col + "&fil=" + filter + "&category=" + cat;
 
                 console.log("getting filtered items");

@@ -33,7 +33,7 @@
 				<div class="row">
 					<div class="col-sm-4 text-center">
 						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/polo_kneepads.jpg);">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/polohelmet.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">Helmets</h2>
 								<p><a href="../product/product.php?prod=helmet" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
@@ -41,7 +41,7 @@
 					</div>
 					<div class="col-sm-4 text-center">
 						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/polomallet.jpg);">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/polohelmet.jpg);">
 								<h2 style="background-color: #88c8bc; border-radius: 25px">helmet Accessories</h2>
 								<p><a href="../product/product.php?prod=helmet_accessories" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>

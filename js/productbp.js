@@ -1,3 +1,4 @@
+printAll();
 /**
 <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ALL ITEMS                THIS IS THE CALL THAT RETURNS ALL ITEMS WITHOUT FILTERS -->
@@ -5,7 +6,7 @@
  **/
  function printAll(){
      var xmlhttp = new XMLHttpRequest();
-     var url = "get_item_by_product.php";
+     var url = "../sql/get_item_by_product.php";
      var param = "?prod=" + product;
 
      console.log("get data script running");
@@ -49,7 +50,7 @@
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
  **/
  var xmlhttp = new XMLHttpRequest();
- var url = "get_brand_by_product.php";
+ var url = "../sql/get_brand_by_product.php";
  var param = "?prod=" + product;
 
  console.log("getting brand");
@@ -90,7 +91,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
  **/
  var xmlhttp = new XMLHttpRequest();
- var url = "get_seller_by_product.php";
+ var url = "../sql/get_seller_by_product.php";
  var param = "?prod=" + product;
 
  console.log("getting seller");
@@ -125,7 +126,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
  **/
  var xmlhttp = new XMLHttpRequest();
- var url = "get_colour_by_product.php";
+ var url = "../sql/get_colour_by_product.php";
  var param = "?prod=" + product;
 
  console.log("getting colour");
@@ -162,7 +163,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 **/
  var xmlhttp = new XMLHttpRequest();
- var url = "get_product_range_by_product.php";
+ var url = "../sql/get_product_range_by_product.php";
  var param = "?prod=" + product;
 
  console.log("getting product range");
@@ -201,7 +202,7 @@
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 **/
  var xmlhttp = new XMLHttpRequest();
- var url = "get_gender_by_product.php";
+ var url = "../sql/get_gender_by_product.php";
  var param = "?prod=" + product;
 
  console.log("getting gender");
@@ -241,7 +242,7 @@
 **/
  function filter(col, filter, prod){
      var xmlhttp = new XMLHttpRequest();
-     var url = "filter_items_by_product.php";
+     var url = "../sql/filter_items_by_product.php";
      var param = "?cat=" + col + "&fil=" + filter + "&prod=" + prod;
 
      console.log("getting filtered items");
