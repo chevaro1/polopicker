@@ -112,7 +112,7 @@
               </div>
             </div>
 
-            <!-- <canvas class="my-4" id="myChart" width="900" height="380"></canvas> -->
+            <canvas class="my-4" id="myChart" width="900" height="500"></canvas>
 
 
 
@@ -123,7 +123,7 @@
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
       <script src="../../assets/js/vendor/popper.min.js"></script>
       <script src="../../dist/js/bootstrap.min.js"></script>
@@ -137,33 +137,114 @@
       <!-- Graphs -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
       <script>
-        var ctx = document.getElementById("myChart");
-        var myChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      /**
+      var ctx = document.getElementById('myChart');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
-              data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-              lineTension: 0,
-              backgroundColor: 'transparent',
-              borderColor: '#007bff',
-              borderWidth: 4,
-              pointBackgroundColor: '#007bff'
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
             }]
-          },
-          options: {
+        },
+        options: {
             scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero: false
-                }
-              }]
-            },
-            legend: {
-              display: false,
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
             }
+        }
+      });
+
+**/
+
+    getData();
+
+
+
+
+    function getData(){
+        var xmlhttp = new XMLHttpRequest();
+        var url = "../sql/admin_count_website.php";
+        //var param = "?cat=" + product;
+
+        console.log("get data script running");
+
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            barChart(myArr);
           }
-        });
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+
+
+    function barChart(arr){
+
+      var website = [];
+      var total = [];
+      var colours = []
+
+      for(i = 0; i < arr.length; i++) {
+        console.log("website = " + arr[i].website);
+        console.log("total = " + arr[i].total);
+        website.push(arr[i].website);
+        total.push(arr[i].total);
+        colours.push(dynamicColors());
+      }
+
+      var ctx = $("#myChart");
+
+      var barGraph = new Chart(ctx,{
+        type: 'pie',
+        data: {
+          labels: website,
+          datasets: [{
+            data: total,
+            lineTension: 0,
+            backgroundColor: colours,
+            //borderColor: 'green',
+            borderWidth: 1,
+            pointBackgroundColor: 'green'
+          }]
+        },
+      });
+    }
+
+    var dynamicColors = function() {
+      var r = Math.floor(Math.random() * 255);
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+
+
+
+
+
       </script>
     </body>
   </html>
