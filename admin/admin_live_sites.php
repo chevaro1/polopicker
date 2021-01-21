@@ -26,14 +26,23 @@
               </div>
             </div>
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-              <div class="row">
-                <div class="col-md-10">
-                  <canvas class="my-4" id="myChart" width="1500" height="1000"></canvas>
-                </div>
-                <div class="col-md-2">
-                  <h1> hi there</h1>
-                </div>
-              </div>
+							<div class="col-md-10">
+								<table class="table">
+								  <thead class="thead-dark">
+								    <tr>
+								      <th scope="col">Website</th>
+								      <th scope="col">Errors Last run</th>
+								      <th scope="col">Active State</th>
+								      <th scope="col">Change State</th>
+								    </tr>
+								  </thead>
+								  <tbody id="table">
+
+								  </tbody>
+								</table>
+
+							</div>
+
             </div>
 
 
@@ -57,75 +66,12 @@
 
       <!-- Graphs -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+			<script src="../js/live_sites.js"></script>
       <script>
 
-
-    getData();
-
-
-
-
-    function getData(){
-        var xmlhttp = new XMLHttpRequest();
-        var url = "../sql/admin_count_website.php";
-        //var param = "?cat=" + product;
-
-        console.log("get data script running");
-
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            barChart(myArr);
-          }
-        };
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-    }
-
-
-    function barChart(arr){
-
-      var website = [];
-      var total = [];
-      var colours = []
-
-      for(i = 0; i < arr.length; i++) {
-        console.log("website = " + arr[i].website);
-        console.log("total = " + arr[i].total);
-        website.push(arr[i].website);
-        total.push(arr[i].total);
-        colours.push(dynamicColors());
-      }
-
-      var ctx = $("#myChart");
-
-      var barGraph = new Chart(ctx,{
-        type: 'horizontalBar',
-        data: {
-          labels: website,
-          datasets: [{
-            data: total,
-						label: "products",
-            lineTension: 0,
-            backgroundColor: colours,
-            //borderColor: 'green',
-            borderWidth: 1,
-            pointBackgroundColor: 'green'
-          }]
-        },
-      });
-    }
-
-    var dynamicColors = function() {
-      var r = Math.floor(Math.random() * 255);
-      var g = Math.floor(Math.random() * 255);
-      var b = Math.floor(Math.random() * 255);
-      return "rgb(" + r + "," + g + "," + b + ")";
-    }
-
-
-
-
+			function hi(name, state) {
+				alert("hi there " + name + "state = " + state);
+			}
 
 
       </script>

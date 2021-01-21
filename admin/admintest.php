@@ -178,10 +178,20 @@
 
 **/
 
+
+
+    var websites = [];
+    var total = [];
+    var colours = [];
+
+    var dynamicColors = function() {
+      var r = Math.floor(Math.random() * 255);
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
     getData();
-
-
-
 
     function getData(){
         var xmlhttp = new XMLHttpRequest();
@@ -196,49 +206,67 @@
             barChart(myArr);
           }
         };
-        xmlhttp.open("GET", url, true);
+        xmlhttp.open("GET", url, false);
         xmlhttp.send();
     }
 
 
-    function barChart(arr){
 
-      var website = [];
-      var total = [];
-      var colours = []
+    function barChart(arr){
 
       for(i = 0; i < arr.length; i++) {
         console.log("website = " + arr[i].website);
         console.log("total = " + arr[i].total);
-        website.push(arr[i].website);
+        websites.push(arr[i].website);
         total.push(arr[i].total);
         colours.push(dynamicColors());
       }
+    }
 
-      var ctx = $("#myChart");
 
-      var barGraph = new Chart(ctx,{
+    console.log("MAKING DATA AND OPTIONS VARIABLES");
+      var data = [{
+            data: total,
+            labels: websites,
+            backgroundColor: colours,
+            borderColor: "#fff"
+        }];
+
+           var options = {
+           tooltips: {
+         enabled: true
+    },
+             plugins: {
+            datalabels: {
+                formatter: (value, ctx) => {
+
+                  let sum = 0;
+                  let dataArr = ctx.chart.data.datasets[0].data;
+                  dataArr.map(data => {
+                      sum += data;
+                  });
+                  let percentage = (value*100 / sum).toFixed(2)+"%";
+                  return percentage;
+
+
+                },
+                color: '#fff',
+                     }
+        }
+    };
+
+    console.log("totals = " + data[0].labels);
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-          labels: website,
-          datasets: [{
-            data: total,
-            lineTension: 0,
-            backgroundColor: colours,
-            //borderColor: 'green',
-            borderWidth: 1,
-            pointBackgroundColor: 'green'
-          }]
+            datasets: data
         },
-      });
-    }
+              options: options
+    });
 
-    var dynamicColors = function() {
-      var r = Math.floor(Math.random() * 255);
-      var g = Math.floor(Math.random() * 255);
-      var b = Math.floor(Math.random() * 255);
-      return "rgb(" + r + "," + g + "," + b + ")";
-    }
+
 
 
 
