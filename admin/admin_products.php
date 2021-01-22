@@ -26,28 +26,17 @@
               </div>
             </div>
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-							<div class="col-md-12">
-                <div class="row">
-                  <div class="card p-4 m-3 bg-primary border-dark text-white">
-                    <h4 class="card-title text-white">Total Products:</h4>
-                    <div class="card-body text-center"><h1 class="text-white" id="products"></h1></div>
-                  </div>
-                  <div class="card p-4 m-3 bg-success border-dark text-white">
-                    <h4 class="card-title text-white">Live Sites:</h4>
-                    <div class="card-body text-center"><h1 class="text-white" id="sites"></h1></div>
-                  </div>
-                  <div class="card p-4 m-3 bg-warning border-dark text-white">
-                    <h4 class="card-title text-white">Categories:</h4>
-                    <div class="card-body text-center"><h1 class="text-white" id="cats"></h1></div>
-                  </div>
-                  <div class="card p-4 my-3 ml-3 bg-danger border-dark text-white">
-                    <h4 class="card-title text-white">Erros Last Run:</h4>
-                    <div class="card-body text-center"><h1 class="text-white" id="errors"></h1></div>
-                  </div>
+              <div class="row">
+                <div class="col-md-10">
+                  <canvas class="my-4" id="myChart" width="1500" height="1000"></canvas>
                 </div>
-                
-							</div>
+                <div class="col-md-2">
+                  <h1> hi there</h1>
+                </div>
+              </div>
             </div>
+
+
           </main>
         </div>
       </div>
@@ -68,8 +57,75 @@
 
       <!-- Graphs -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-			<script src="../js/highlights.js"></script>
       <script>
+
+
+    getData();
+
+
+
+
+    function getData(){
+        var xmlhttp = new XMLHttpRequest();
+        var url = "../sql/admin_count_website.php";
+        //var param = "?cat=" + product;
+
+        console.log("get data script running");
+
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            barChart(myArr);
+          }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+
+
+    function barChart(arr){
+
+      var website = [];
+      var total = [];
+      var colours = []
+
+      for(i = 0; i < arr.length; i++) {
+        console.log("website = " + arr[i].website);
+        console.log("total = " + arr[i].total);
+        website.push(arr[i].website);
+        total.push(arr[i].total);
+        colours.push(dynamicColors());
+      }
+
+      var ctx = $("#myChart");
+
+      var barGraph = new Chart(ctx,{
+        type: 'horizontalBar',
+        data: {
+          labels: website,
+          datasets: [{
+            data: total,
+						label: "products",
+            lineTension: 0,
+            backgroundColor: colours,
+            //borderColor: 'green',
+            borderWidth: 1,
+            pointBackgroundColor: 'green'
+          }]
+        },
+      });
+    }
+
+    var dynamicColors = function() {
+      var r = Math.floor(Math.random() * 255);
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+
+
+
 
 
       </script>
