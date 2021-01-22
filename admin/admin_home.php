@@ -1,3 +1,7 @@
+<?php
+include 'blocks/logged-in.php';
+ ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -45,7 +49,7 @@
                     <div class="card-body text-center"><h1 class="text-white" id="errors"></h1></div>
                   </div>
                 </div>
-                
+
 							</div>
             </div>
           </main>
