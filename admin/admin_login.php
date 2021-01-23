@@ -6,12 +6,12 @@ session_destroy();
 
 #Check if the user is logged in, if so then take them through to the search page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
-   header("location: ../admin/admin_home.php");
+   header("location: admin_home.php");
     exit;
 }
 
 #include config file
-require_once '../sql/config.php';
+require_once '../sql//config.php';
 
 #define variables and initialize with empty values
 $username = $password = "";
@@ -39,7 +39,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     #validate credentials
     if(empty($username_err) && empty($password_err)){
-        error_log("validating creds");
 
         #prepare a select statement
         $sql = "SELECT id, username, password, priv FROM users WHERE username = ?";
@@ -53,7 +52,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             #attempt tp execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                error_log("statement execution successful");
                 // store result
                 mysqli_stmt_store_result($stmt);
                 #read out the number of rows returned
@@ -66,9 +64,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashedpassword)){
                             # password is correct so start a new session
+                            error_log("setting session after successful login");
                             session_start();
-
-                            error_log("password correct");
 
                             # store data in session variables
                             $_SESSION["loggedin"] = true;
@@ -77,8 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["priv"] = $priv;
 
                             #redirect user to welcome page
-                            header("location: ../admin/admin_home.php");
-                            echo("password correct");
+                            header("location: admin_home.php");
 
 
                         } else{
@@ -122,6 +118,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </form>
           </div>
         </div>
-        <!-- <script src="js/main.js"></script> -->
+        <script src="../js/main.js"></script>
     </body>
 </html>

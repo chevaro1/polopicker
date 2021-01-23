@@ -1,5 +1,5 @@
 <?php
-include 'blocks/logged-in.php';
+include '../blocks/logged-in.php';
  ?>
 
 <!DOCTYPE HTML>
