@@ -26,10 +26,12 @@ printAll();
      var out = "";
      var i;
      for(i = 0; i < arr.length; i++) {
+       var name = arr[i].website;
+       name = name.replace("_", " ");
       out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
               '<div class=\"product-entry border\">' +
               '<div class=\"desc\">' +
-              '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
+              '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
               '</div>' +
               '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
               '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
@@ -262,10 +264,12 @@ printAll();
      var out = "";
      var i;
      for(i = 0; i < arr.length; i++) {
+       var name = arr[i].website;
+       name = name.replace("_", " ");
       out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
               '<div class=\"product-entry border\">' +
               '<div class=\"desc\">' +
-              '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
+              '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
               '</div>' +
               '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
               '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
