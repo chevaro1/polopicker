@@ -28,7 +28,7 @@ function myFunction(arr) {
     var i;
     for(i = 0; i < arr.length; i++) {
       var name = arr[i].website;
-      name = name.replace("_", " ");
+      name = name.replaceAll("_", " ");
      out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
              '<div class=\"product-entry border\">' +
              '<div class=\"desc\">' +
@@ -266,7 +266,7 @@ function printfilter(arr) {
     var i;
     for(i = 0; i < arr.length; i++) {
       var name = arr[i].website;
-      name = name.replace("_", " ");
+      name = name.replaceAll("_", " ");
      out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
              '<div class=\"product-entry border\">' +
              '<div class=\"desc\">' +
