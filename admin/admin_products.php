@@ -32,7 +32,7 @@ include '../blocks/logged-in.php';
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
               <div class="row">
                 <div class="col-md-10">
-                  <canvas class="my-4" id="myChart" width="1500" height="1000"></canvas>
+                  <canvas class="my-4" id="myChart" width="1500" height="2000"></canvas>
                 </div>
                 <div class="col-md-2">
                   <h1> hi there</h1>
