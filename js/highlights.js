@@ -9,6 +9,8 @@ function getData(){
   getCats();
 
   getErrors();
+
+  getUnknown();
 }
 
 function getProducts(){
@@ -82,5 +84,21 @@ function getErrors(){
 
 function printData(id, val){
   document.getElementById(id).innerHTML = val;
+}
 
+function getUnknown(){
+  var xmlhttp = new XMLHttpRequest();
+  var url = "../sql/admin_get_unknown.php";
+  //var param = "?cat=" + product;
+
+  console.log("get data script running");
+
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myArr = JSON.parse(this.responseText);
+      printData("unknown", myArr[0].total);
+    }
+  };
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
 }

@@ -48,6 +48,10 @@ include '../blocks/logged-in.php';
                     <h4 class="card-title text-white">Erros Last Run:</h4>
                     <div class="card-body text-center"><h1 class="text-white" id="errors"></h1></div>
                   </div>
+                  <div class="card p-4 my-3 ml-3 bg-danger border-dark text-white">
+                    <h4 class="card-title text-white">Uncategorized Products:</h4>
+                    <div class="card-body text-center"><h1 class="text-white" id="unknown"></h1></div>
+                  </div>
                 </div>
 
 							</div>
