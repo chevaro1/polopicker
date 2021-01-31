@@ -2,6 +2,7 @@ var page = "1";
 console.log("product name 2 = " + product);
 var dataArr = {"cat": product};
 var totalPages = 1;
+var order = "ASC";
 //dataArr["cat"] = product;
 console.log("data array = " + dataArr);
 getRes();
@@ -101,6 +102,24 @@ function setPrice() {
       canCall = true;
   }, 990);
 }
+
+
+/**
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- PRICE ORDER               THIS IS THE CALL TO THE GET THE PRICE ORDER                                              -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+**/
+
+function pOrder(){
+  order = document.getElementById("order").value;
+  console.log(order);
+  arrFormat();
+}
+
+
+
+
+
 
 
 /**
@@ -517,6 +536,7 @@ function arrFormat() {
     dataArr["sprice"] = sprice;
     dataArr["fprice"] = fprice;
   }
+  dataArr["order"] = order;
   console.log(dataArr);
   getRes();
   getPages();

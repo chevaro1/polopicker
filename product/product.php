@@ -81,6 +81,16 @@ $product = str_replace("-", " ", $product);
                       <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                       </p>
                       <div id="slider-range"></div>
+                      <hr>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary" onclick="pOrder()" type="button">Search</button>
+                        </div>
+                        <select class="custom-select" id="order">
+                          <option selected value="ASC">Price Ascending</option>
+                          <option value="DESC">Price Descending</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>

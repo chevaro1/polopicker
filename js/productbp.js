@@ -2,6 +2,7 @@ var page = "1";
 console.log("product name 2 = " + product);
 var dataArr = {"cat": product};
 var totalPages = 1;
+var order = "ASC";
 //dataArr["cat"] = product;
 console.log("data array = " + dataArr);
 getRes();
@@ -103,6 +104,21 @@ getPages();
  }
 
  /**
+ <!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
+ <!-- PRICE ORDER               THIS IS THE CALL TO THE GET THE PRICE ORDER                                              -->
+ <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+ **/
+
+ function pOrder(){
+   order = document.getElementById("order").value;
+   console.log(order);
+   arrFormat();
+ }
+
+
+
+
+ /**
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- BRAND                THIS IS THE CALL TO THE BRAND FILTER WHICH RETURNS THE PRODUCT BRANDS                                                 -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -124,24 +140,35 @@ getPages();
 
 
  function printBrands(arr) {
-     console.log("print brands called");
-     var out = "";
-     var i;
-     out += '<h3>Brands</h3> '+
-            '<ul>' +
-            '<li><a href="javascript:printAll()">All</a></li>';
-     for(i = 0; i < arr.length; i++) {
-         //out +=  '<li><a href="javascript:filter("brand","' + arr[i].name + '")">' + arr[i].name + '</a></li>';
-         //out +=  '<li><a>' + arr[i].name + '</a></li>';
-         if (arr[i].name === "other"){
-              out +=  '<li><a href="javascript:filter(\'brand\',\'unknown\',\'' + product +'\')">' + arr[i].name + '</a></li>';
-         } else{
-                 out +=  '<li><a href="javascript:filter(\'brand\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
-             }
+   console.log("print brands called");
+   var out = "";
+   var i;
+   out += '<ul>';
+          //'<li><a href="javascript:printAll()">All</a></li>';
+   for(i = 0; i < arr.length; i++) {
+       //out +=  '<li><a href="javascript:filter("brand","' + arr[i].name + '")">' + arr[i].name + '</a></li>';
+       //out +=  '<li><a>' + arr[i].name + '</a></li>';
+       out += '<br>';
+       if (arr[i].name === "other"){
+            //out +=  '<li><a href="javascript:filter(\'brand\',\'unknown\',\'' + product +'\')">' + arr[i].name + '</a></li>';
+            out += '<label>';
+            out += '<input class="mr-2" type="checkbox" name="brand" value="unknown">';
+            out += arr[i].name;
+            out += '</label>';
+       } else{
+               //out +=  '<li><a href="javascript:filter(\'brand\',\'' + arr[i].name + '\',\'' + product +'\')">' + arr[i].name + '</a></li>';
+               var name = arr[i].name;
+               name = name.replaceAll(" ", "_");
+               out += '<label>';
+               out += '<input class="mr-2" type="checkbox" name="brand" value=' + name + '>';
+               out += arr[i].name;
+               out += '</label>';
+           }
 
-     }
-     out += '</ul>';
-     document.getElementById("brand").innerHTML = out;
+   }
+   out += '</ul>';
+   document.getElementById("brand").innerHTML = out;
+   getBrand();
  }
  /**
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -507,6 +534,7 @@ getPages();
      dataArr["sprice"] = sprice;
      dataArr["fprice"] = fprice;
    }
+   dataArr["order"] = order;
    console.log(dataArr);
    getRes();
    getPages();

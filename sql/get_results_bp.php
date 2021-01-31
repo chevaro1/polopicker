@@ -17,7 +17,12 @@ $arr = $data;
 
 $select = "SELECT * FROM products ";
 $where = "WHERE TRUE";
+$order = " ORDER BY price ";
 
+if (array_key_exists('order', $arr)) {
+  #echo "cat exists in this array";
+  $order .= $arr["order"];
+}
 if (array_key_exists('cat', $arr)) {
   #echo "cat exists in this array";
   $where .= ' AND product = "' .$arr["cat"] .'"';
@@ -84,7 +89,7 @@ $offset = $page * $limit; //skip rows from previous pages
 #echo $page;
 #echo $limit;
 $limit = " LIMIT $offset,$limit";
-$order = " ORDER BY price ASC";
+
 $query = $select.$where.$order.$limit;
 
 #echo $query;
