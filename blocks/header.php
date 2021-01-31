@@ -20,7 +20,7 @@ if($boo){
 
     $_SESSION["search_term"] = $term;
 
-    header("location: search_results.php?term=$term");
+    header("location: ../home/search_results.php?term=$term");
 
     exit;
 
@@ -35,7 +35,7 @@ if($boo){
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="home.php">Polo Picker</a></div>
+							<div id="colorlib-logo"><a href="../home/home.php">Polo Picker</a></div>
 						</div>
 						<div class="col-sm-5 col-md-3">
 			            <form action="" method="post" class="search-wrap">

@@ -34,7 +34,7 @@ $product = str_replace("-", " ", $product);
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="home.html">Home</a></span> / <span>player</span></p>
+						<p class="bread"><span><a href="home.html">Home</a></span> / <span>product</span></p>
 					</div>
 				</div>
 			</div>
