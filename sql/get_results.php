@@ -57,7 +57,7 @@ if (array_key_exists('colour', $arr)) {
   $len = count($arr["colour"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
-    $where .= ' OR colour LIKE "%' .$arr["colour"] .'%"';
+    $where .= ' OR colour LIKE "%' .$arr["colour"][$i] .'%"';
   }
   $where .= ") ";
 }
