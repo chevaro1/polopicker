@@ -25,7 +25,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="home.html">Home</a></span> / <span>about</span></p>
+						<p class="bread"><span><a href="../home/home.php">Home</a></span> / <span>about</span></p>
 					</div>
 				</div>
 			</div>
