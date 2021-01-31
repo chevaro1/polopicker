@@ -52,18 +52,18 @@ if($boo){
 								<li><a href="../home/home.php">Home</a></li>
 								<li class="has-dropdown active">
 									<a href="../home/player.php">the player</a>
-									<ul class="dropdown">
+									<!--<ul class="dropdown">
                     <li><a href="../productkneepads.php">Kneepads</a></li>
                     <li><a href="../options/mallet_options.php">Mallets</a></li>
                     <li><a href="../product/product.php?prod=glove">Gloves</a></li>
                     <li><a href="../options/helmet_options.php">Helmets</a></li>
 										<li><a href="../product/product.php?prod=poloboot">Boots</a></li>
                     <li><a href="../product/product.php?prod=trousers">Whites</a></li>
-									</ul>
+									</ul> -->
 								</li>
                 <li class="has-dropdown active">
 									<a href="../home/pony.php">the pony</a>
-									<ul class="dropdown">
+									<!--<ul class="dropdown">
                    <li><a href="../options/saddle_options.php">Saddles</a></li>
                    <li><a href="../product/product.php?prod=bridle">Bridles</a></li>
                    <li><a href="../product/product.php?prod=bandages">Bandages</a></li>
@@ -71,7 +71,7 @@ if($boo){
                    <li><a href="../product/product.php?prod=headcollar">Headcollars</a></li>
                    <li><a href="../product/product.php?prod=rug">Rugs</a></li>
 									</ul>
-								</li>
+								</li> -->
 								<!--<li><a href="">the pets</a></li> -->
 								<li><a href="../home/about.php">about</a></li>
 								<!-- <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li> -->
