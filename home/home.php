@@ -17,7 +17,7 @@
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/playerandhorse1.jpg);">
+			   	<li style="background-image: url(../images/player_and_horse_black_white.png);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -88,7 +88,7 @@
 				<div class="row">
 					<div class="col-sm-6 text-center">
 						<div class="featured">
-                                                    <a href="player.php" class="featured-img" style="background-image: url(../images/playerandhorse.jpg);"></a>
+                                                    <a href="player.php" class="featured-img" style="background-image: url(../images/player_and_horse_in_stable.png);"></a>
 							<div class="desc">
                                                             <h2><a href="player.php">For The Player</a></h2>
 							</div>
@@ -96,7 +96,7 @@
 					</div>
 					<div class="col-sm-6 text-center">
 						<div class="featured">
-                                                    <a href="pony.php" class="featured-img" style="background-image: url(../images/ponytack.jpg);"></a>
+                                                    <a href="pony.php" class="featured-img" style="background-image: url(../images/pony_tack_2.png);"></a>
 							<div class="desc">
                                                             <h2><a href="pony.php">For The Pony</a></h2>
 							</div>
