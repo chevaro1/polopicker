@@ -25,6 +25,13 @@
 	<!-- Flaticons  -->
 	<link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 
+	<!-- my personal sytlesheet -->
+	<link rel="stylesheet" href="../css/custom.css">
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="../css/style.css">
 

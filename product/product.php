@@ -44,63 +44,103 @@ $product = str_replace("-", " ", $product);
 
 
                <!-- THIS IS THE PRODUCT SECTION -->
-		<div class="colorlib-product">
-			<div class="container">
+
+
+        <h5 class="pl-3" id="results">Results: </h5>
 				<div class="row">
 					<div class="col-lg-3 col-xl-3">
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="side border mb-1" id="brand">
-								</div>
-							</div>
-						<!--	<div class="col-sm-12">
-								<div class="side border mb-1">
-									<h3>Size/Width</h3>
-									<div class="block-26 mb-2">
-										<h4>Size</h4>
-					               <ul>
-					                  <li><a href="#">7</a></li>
-					                  <li><a href="#">7.5</a></li>
-					                  <li><a href="#">8</a></li>
-					                  <li><a href="#">8.5</a></li>
-					                  <li><a href="#">9</a></li>
-					                  <li><a href="#">9.5</a></li>
-					                  <li><a href="#">10</a></li>
-					                  <li><a href="#">10.5</a></li>
-					                  <li><a href="#">11</a></li>
-					                  <li><a href="#">11.5</a></li>
-					                  <li><a href="#">12</a></li>
-					                  <li><a href="#">12.5</a></li>
-					                  <li><a href="#">13</a></li>
-					                  <li><a href="#">13.5</a></li>
-					                  <li><a href="#">14</a></li>
-					               </ul>
-					            </div>
-					            <div class="block-26">
-										<h4>Width</h4>
-					               <ul>
-					                  <li><a href="#">M</a></li>
-					                  <li><a href="#">W</a></li>
-					               </ul>
-					            </div>
-								</div>
-							</div> -->
-							<div class="col-sm-12">
-								<div class="side border mb-1" id="seller">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="side border mb-1" id="colour">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="side border mb-1" id="product">
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="side border mb-1" id="gender">
-								</div>
-							</div>
+              <div id="accordion" class="col-sm-12">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Product Range
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body" id="product">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Price
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body" id="price">
+                      <p>
+                      <label for="amount">Price range:</label>
+                      <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                      </p>
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Retailer
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body" id="seller">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingfour">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                        Colour
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                    <div class="card-body" id="colour">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingfive">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                        Gender
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
+                    <div class="card-body" id="gender">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingsix">
+                    <h5 class="mb-0">
+                      <button class="btn btn-secondary btn-custom-sm collapsed btn-block" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                        Brand
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordion">
+                    <div class="card-body" id="brand">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
 						</div>
 					</div>
 					<div class="col-lg-9 col-xl-9">
@@ -111,6 +151,12 @@ $product = str_replace("-", " ", $product);
 				</div>
 			</div>
 		</div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="block-27" id="pageno">
+        </div>
+      </div>
+    </div>
 
 		<?php include ("../blocks/partners.php") ?>
 
@@ -145,12 +191,15 @@ $product = str_replace("-", " ", $product);
 	<!-- Main -->
 	<script src="../js/main.js"></script>
 
-        <script>
 
-            var product = "<?php echo $product ?>";
-            var pagename = "balls.php";
-            console.log("product name = " + product);
-        </script>
+  <script>
+
+      var product = "<?php echo $product ?>";
+      var pagename = "balls.php";
+      console.log("product name = " + product);
+  </script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <?php echo $js ?>
 
 	</body>
