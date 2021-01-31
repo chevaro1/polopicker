@@ -26,49 +26,54 @@ if (array_key_exists('cat', $arr)) {
 if (array_key_exists('brand', $arr)) {
   #echo "brand exists in this array";
   $name = str_replace("_", " ",$arr["brand"][0]);
-  $where .= ' AND brand = "' .$name .'"';
+  $where .= ' AND '.'('.'brand = "' .$name .'"';
   $len = count($arr["brand"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
     $name = str_replace("_", " ",$arr["brand"][$i]);
     $where .= ' OR brand = "' .$name .'"';
   }
+  $where .= ") ";
 }
 if (array_key_exists('vendor', $arr)) {
   #echo "vendor exists in this array";
-  $where .= ' AND website = "' .$arr["vendor"][0] .'"';
+  $where .= ' AND '.'('.'website = "' .$arr["vendor"][0] .'"';
   $len = count($arr["vendor"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
     $where .= ' OR website = "' .$arr["vendor"][$i] .'"';
   }
+  $where .= ") ";
 }
 if (array_key_exists('colour', $arr)) {
   #echo "colour exists in this array";
-  $where .= ' AND colour LIKE "%' .$arr["colour"][0] .'%"';
+  $where .= ' AND '.'('.'colour LIKE "%' .$arr["colour"][0] .'%"';
   $len = count($arr["colour"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
     $where .= ' OR colour LIKE "%' .$arr["colour"] .'%"';
   }
+  $where .= ") ";
 }
 if (array_key_exists('range', $arr)) {
   $name = str_replace("_", " ",$arr["range"][0]);
-  $where .= ' AND product = "' .$name .'"';
+  $where .= ' AND '.'('.'product = "' .$name .'"';
   $len = count($arr["range"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
     $name = str_replace("_", " ",$arr["range"][$i]);
     $where .= ' OR product = "' .$name .'"';
   }
+  $where .= ") ";
 }
 if (array_key_exists('gender', $arr)) {
-  $where .= ' AND gender = "' .$arr["gender"][0] .'"';
+  $where .= ' AND '.'('.'gender = "' .$arr["gender"][0] .'"';
   $len = count($arr["gender"]);
   #echo $len;
   for($i = 1; $i < $len; $i++) {
     $where .= ' OR gender = "' .$arr["gender"][$i] .'"';
   }
+  $where .= ") ";
 }
 if (array_key_exists('sprice', $arr)) {
   #echo "sprice exists in this array";
