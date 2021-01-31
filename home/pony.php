@@ -120,6 +120,36 @@
 				</div>
 			</div>
 		</div>
+		<div class="colorlib-featured">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_bit.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">muzzles</h2>
+								<p><a href="../product/product.php?prod=muzzle" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_headcollar.jpg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">studs</h2>
+								<p><a href="../product/product.php?prod=studs" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_rug.jpg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">stirrups</h2>
+								<p><a href="../product/product.php?prod=stirrup" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
