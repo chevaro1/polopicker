@@ -156,16 +156,60 @@
 					<div class="col-sm-4 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
-								<h2 style="background-color: #88c8bc; border-radius: 25px">NAF products</h2>
-								<p><a href="../product/product.php?prod=naf" class="btn btn-primary btn-lg">Shop now</a></p>
+								<h2 style="background-color: #88c8bc; border-radius: 25px">lunging</h2>
+								<p><a href="../product/product.php?prod=lunging" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
-
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">horse treats</h2>
+								<p><a href="../product/product.php?prod=treats" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">horse clippers</h2>
+								<p><a href="../product/product.php?prod=clippers" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
+		<div class="colorlib-featured">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">grooming kits and burshes</h2>
+								<p><a href="../product/product.php?prod=grooming_kit" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">muzzles</h2>
+								<p><a href="../product/product.php?prod=muzzle" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-center">
+						<div class="featured">
+							<div class="featured-img featured-img-2" style="background-image: url(../images/horse_muzzle.jpeg);">
+								<h2 style="background-color: #88c8bc; border-radius: 25px">plaiting</h2>
+								<p><a href="../product/product.php?prod=plaiting" class="btn btn-primary btn-lg">Shop now</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<?php include ("../blocks/partners.php") ?>

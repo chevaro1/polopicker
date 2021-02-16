@@ -7279,7 +7279,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -8470,6 +8470,7 @@ input[type="text"] {
   z-index: 1901;
   width: 270px;
   background: black;
+  font-size: 30px;
   top: 0;
   right: 0;
   top: 0;
@@ -8580,7 +8581,7 @@ input[type="text"] {
   height: 25px;
   cursor: pointer;
   text-decoration: none;
-  top: 2.7em !important; }
+  top: 0.7em !important; }
   .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
     background: #fff; }
   .colorlib-nav-toggle:hover, .colorlib-nav-toggle:focus, .colorlib-nav-toggle:active {
