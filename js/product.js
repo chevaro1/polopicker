@@ -581,7 +581,7 @@ function printfilter(arr) {
              '</a>' +
              '<div class=\"desc\">' +
              '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
-             '<span class=\"price\">' + arr[i].price +'</span>' +
+             '<span class=\"price\">£' + arr[i].price +'</span>' +
              '</div>' +
              '</div>' +
              '</div>';
