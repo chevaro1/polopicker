@@ -6,26 +6,17 @@
  * and open the template in the editor.
  */
 
-$cat = $_POST['cat'];
-
 require_once 'config.php';
 
-$sql = "SELECT brand AS name FROM products WHERE category = '$cat' group by brand";
+$sql = "SELECT title FROM report_options WHERE status = '0' ORDER BY title ASC";
 
 $result = mysqli_query($link, $sql);
 
 $arr = [];
-$count = 0;
 
 if (mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
-        if ($row["name"] === "unknown"){
-            #echo "unknown found". $count;
-            $row["name"] = "other";
-        }
         array_push($arr, $row);
-        $count += 1;
-
     }
 }
 #echo $count;
