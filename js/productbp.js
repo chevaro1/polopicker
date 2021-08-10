@@ -572,13 +572,13 @@ getPages();
       out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
               '<div class=\"product-entry border\">' +
               '<div class=\"desc\">' +
-              '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
+              '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + name + '</a></h2>' +
               '</div>' +
-              '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
+              '<a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\" class=\"prod-img\">' +
               '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
               '</a>' +
               '<div class=\"desc\">' +
-              '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
+              '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + arr[i].name + '</a></h2>' +
               '<span class=\"price\">£' + arr[i].price +'</span>' +
               '</div>' +
               '</div>' +

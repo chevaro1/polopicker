@@ -51,7 +51,7 @@ if($boo){
 							<ul>
 								<li><a href="../home/home.php">Home</a></li>
 								<li class="has-dropdown active">
-									<a href="../home/player.php">the player</a>
+									<a href="../home/player.php">the rider</a>
 									<!--<ul class="dropdown">
                     <li><a href="../productkneepads.php">Kneepads</a></li>
                     <li><a href="../options/mallet_options.php">Mallets</a></li>

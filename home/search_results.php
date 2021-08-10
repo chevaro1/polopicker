@@ -153,7 +153,17 @@
             var pagename = "helmets.php";
 
             printAll();
+						searchData();
 
+						function searchData(){
+						  console.log("saving search data");
+						  $.ajax({
+						    url: "../sql/save_search_data.php",
+						    type: "POST",
+						    data: {term: product}, // serializes the form's elements.
+						  });
+						}
+						
  <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ALL ITEMS                THIS IS THE CALL THAT RETURNS ALL ITEMS WITHOUT FILTERS -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -180,20 +190,20 @@
                 var out = "";
                 var i;
                 for(i = 0; i < arr.length; i++) {
-                 out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
-                         '<div class=\"product-entry border\">' +
-                         '<div class=\"desc\">' +
-                         '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
-                         '</div>' +
-                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
-                         '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-                         '</a>' +
-                         '<div class=\"desc\">' +
-                         '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
-                         '<span class=\"price\">' + arr[i].price +'</span>' +
-                         '</div>' +
-                         '</div>' +
-                         '</div>';
+									out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
+ 					               '<div class=\"product-entry border\">' +
+ 					               '<div class=\"desc\">' +
+ 					               '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + name + '</a></h2>' +
+ 					               '</div>' +
+ 					               '<a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\" class=\"prod-img\">' +
+ 					               '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
+ 					               '</a>' +
+ 					               '<div class=\"desc\">' +
+ 					               '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + arr[i].name + '</a></h2>' +
+ 					               '<span class=\"price\">£' + arr[i].price +'</span>' +
+ 					               '</div>' +
+ 					               '</div>' +
+ 					               '</div>';
 
                 }
                 document.getElementById("id01").innerHTML = out;
@@ -416,20 +426,20 @@
                 var out = "";
                 var i;
                 for(i = 0; i < arr.length; i++) {
-                 out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
-                         '<div class=\"product-entry border\">' +
-                         '<div class=\"desc\">' +
-                         '<h2><a href=\"' + arr[i].link + '\">' + arr[i].website + '</a></h2>' +
-                         '</div>' +
-                         '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
-                         '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-                         '</a>' +
-                         '<div class=\"desc\">' +
-                         '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
-                         '<span class=\"price\">' + arr[i].price +'</span>' +
-                         '</div>' +
-                         '</div>' +
-                         '</div>';
+									out +=  '<div class=\"col-md-3 col-lg-3 mb-4 text-center\">' +
+ 					               '<div class=\"product-entry border\">' +
+ 					               '<div class=\"desc\">' +
+ 					               '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + name + '</a></h2>' +
+ 					               '</div>' +
+ 					               '<a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\" class=\"prod-img\">' +
+ 					               '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
+ 					               '</a>' +
+ 					               '<div class=\"desc\">' +
+ 					               '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + arr[i].name + '</a></h2>' +
+ 					               '<span class=\"price\">£' + arr[i].price +'</span>' +
+ 					               '</div>' +
+ 					               '</div>' +
+ 					               '</div>';
 
                 }
                 document.getElementById("id01").innerHTML = out;

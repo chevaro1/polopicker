@@ -32,9 +32,21 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Customers
+              <a class="nav-link" href="category_printout.php">
+                <span data-feather="layers"></span>
+                Category Printout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product_printout.php">
+                <span data-feather="layers"></span>
+                Product Printout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edit_menu_page.php">
+                <span data-feather="edit"></span>
+                Edit Menu pages
               </a>
             </li>
             <li class="nav-item">

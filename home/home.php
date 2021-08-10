@@ -24,7 +24,7 @@
 				   			<div class="col-sm-6 offset-sm-3 text-center slider-text">
 				   				<div class="slider-text-inner">
 				   					<div class="desc">
-					   					<h1 class="head-1">The Player</h1>
+					   					<h1 class="head-1">The Rider</h1>
 					   					<h2 class="head-2">clothing</h2>
 					   					<h2 class="head-3">equipment</h2>
 					   					<p class="category"><span>From All Major Suppliers</span></p>
@@ -60,7 +60,7 @@
 				   			<div class="col-sm-6 offset-sm-3 text-center slider-text">
 				   				<div class="slider-text-inner">
 				   					<div class="desc">
-					   					<h1 class="head-1">The Player</h1>
+					   					<h1 class="head-1">The Rider</h1>
 					   					<h2 class="head-2">clothing</h2>
 					   					<h2 class="head-3">equipment</h2>
 					   					<p class="category"><span>From All Major Suppliers</span></p>
@@ -78,7 +78,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h2 class="intro">Compare polo equipment from all major suppliers in the UK, Quick and Easy.</h2>
+						<h2 class="intro">Compare Equine equipment from all major suppliers in the UK, Quick and Easy.</h2>
 					</div>
 				</div>
 			</div>
@@ -86,19 +86,19 @@
 		<div class="colorlib-product">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-6 text-center">
+					<div class="col-6 text-center">
 						<div class="featured">
-                                                    <a href="player.php" class="featured-img" style="background-image: url(../images/player_and_horse_in_stable.png);"></a>
+            	<a href="player.php" class="featured-img" style="background-image: url(../images/player_and_horse_in_stable.png);"></a>
 							<div class="desc">
-                                                            <h2><a href="player.php">For The Player</a></h2>
+        				<h2><a href="player.php">For The Rider</a></h2>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 text-center">
+					<div class="col-6 text-center">
 						<div class="featured">
-                                                    <a href="pony.php" class="featured-img" style="background-image: url(../images/pony_tack_2.png);"></a>
+              <a href="pony.php" class="featured-img" style="background-image: url(../images/pony_tack_2.png);"></a>
 							<div class="desc">
-                                                            <h2><a href="pony.php">For The Pony</a></h2>
+            		<h2><a href="pony.php">For The Pony</a></h2>
 							</div>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 
 
 
-		<?php include ("../blocks/partners.php") ?>
+		<?php #include ("../blocks/partners.php") ?>
 
 		<?php include ("../blocks/footer.php") ?>
 	</div>

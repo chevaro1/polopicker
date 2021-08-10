@@ -25,28 +25,29 @@
 			</div>
 		</div>
 
-                <?php include '../blocks/page_banner.php' ?>
+
 
 		<div class="colorlib-featured">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 text-center">
+					<?php include '../blocks/player_cats.php' ?>
+					<!--<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/Polo_Kneepads.jpg);">
-                                                            <h2 style="background-color: #88c8bc; border-radius: 25px">Kneepads</h2>
+                <h2 style="background-color: #88c8bc; border-radius: 25px">Kneepads</h2>
 								<p><a href="../options/kneepad_options.php" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polomallet.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Mallets</h2>
-								<p><a href="../options/mallet_options.php" class="btn btn-primary btn-lg">Shop now</a></p>
+								<p><a href="../options/mallet_options.php" class="btn btn-primary btn-block" style="padding-top: 18px; padding-bottom: 18px;">Shop now</a></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polo-gloves.png);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Gloves</h2>
@@ -54,14 +55,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-                <div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polohelmet.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Helmets</h2>
@@ -69,7 +63,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/poloboot.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Boots</h2>
@@ -77,7 +71,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polobreeches.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Breeches</h2>
@@ -85,14 +79,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-                <div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/polo_balls.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Balls</h2>
@@ -100,7 +87,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/bag.png);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Kit Bags</h2>
@@ -108,7 +95,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/whips.jpeg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">whips</h2>
@@ -116,14 +103,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-                </div>
-
-                <div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">glasses</h2>
@@ -131,7 +111,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">tools</h2>
@@ -139,7 +119,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">Face Masks</h2>
@@ -147,14 +127,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-                </div>
-
-								<div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">spurs</h2>
@@ -162,7 +135,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">chaps</h2>
@@ -170,83 +143,23 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 text-center">
+					<div class="col-sm-4 col-6 text-center">
 						<div class="featured">
 							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
                                                             <h2 style="background-color: #88c8bc; border-radius: 25px">wellington boots</h2>
 								<p><a href="../product/product.php?prod=wellington_boots" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 				</div>
 			</div>
-                </div>
-
-								<div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">body protectors</h2>
-								<p><a href="../product/product.php?prod=body_protector" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">neck wear</h2>
-								<p><a href="../product/product.php?prod=neck_wear" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">socks</h2>
-								<p><a href="../product/product.php?prod=socks" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-								</div>
-
-								<div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">wheelbarrows</h2>
-								<p><a href="../product/product.php?prod=wheelbarrow" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">base layers</h2>
-								<p><a href="../product/product.php?prod=base_layer" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(../images/glasses.jpg);">
-																														<h2 style="background-color: #88c8bc; border-radius: 25px">buckets</h2>
-								<p><a href="../product/product.php?prod=buckets" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-								</div>
+		</div>
 
 
 
-		<?php include ("../blocks/partners.php") ?>
+
+		<?php #include ("../blocks/partners.php") ?>
 
 		<?php include ("../blocks/footer.php") ?>
 	</div>
