@@ -40,7 +40,7 @@ $product = str_replace("-", " ", $product);
 			</div>
 		</div>
 
-				                <?php include '../blocks/page_banner.php' ?>
+				                <?php #include '../blocks/page_banner.php' ?>
 
 
                <!-- THIS IS THE PRODUCT SECTION -->
@@ -168,7 +168,8 @@ $product = str_replace("-", " ", $product);
       </div>
     </div>
 
-		<?php include ("../blocks/partners.php") ?>
+
+		<?php #include ("../blocks/partners.php") ?>
 
 		<?php include ("../blocks/footer.php") ?>
 	</div>

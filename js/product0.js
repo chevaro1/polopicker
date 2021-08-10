@@ -3,58 +3,13 @@ console.log("product name 2 = " + product);
 var dataArr = {"cat": product};
 var totalPages = 1;
 var order = "ASC";
+var reportArray = [];
 //dataArr["cat"] = product;
 console.log("data array = " + dataArr);
 getRes();
 getPages();
 
-/**
-<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- ALL ITEMS                THIS IS THE CALL THAT RETURNS ALL ITEMS WITHOUT FILTERS -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------ -->
-**/
-function printAll(){
-    var xmlhttp = new XMLHttpRequest();
-    var url = "../sql/get_item.php";
-    var param = "?cat=" + product;
 
-    console.log("get data script running");
-
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-      }
-    };
-    xmlhttp.open("GET", url+param, true);
-    xmlhttp.send();
-}
-
-function myFunctionold(arr) {
-    console.log("myFunction called");
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-      var name = arr[i].website;
-      name = name.replaceAll("_", " ");
-     out +=  '<div class=\"col-md-3 col-lg-3 col-6 mb-4 text-center\">' +
-             '<div class=\"product-entry border\">' +
-             '<div class=\"desc\">' +
-             '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
-             '</div>' +
-             '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
-             '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-             '</a>' +
-             '<div class=\"desc\">' +
-             '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
-             '<span class=\"price\">' + arr[i].price +'</span>' +
-             '</div>' +
-             '</div>' +
-             '</div>';
-
-    }
-    document.getElementById("id01").innerHTML = out;
-}
 /**
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- PRICE                THIS IS THE CALL TO THE PRICE FILTER WHICH PRINTS THE PRICE BAR                                               -->
@@ -115,11 +70,6 @@ function pOrder(){
   console.log(order);
   arrFormat();
 }
-
-
-
-
-
 
 
 /**
@@ -372,31 +322,6 @@ function filter(col, filter, cat){
     xmlhttp.send();
 }
 
-function printfilterold(arr) {
-    console.log("print filter called");
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-      var name = arr[i].website;
-      name = name.replaceAll("_", " ");
-     out +=  '<div class=\"col-md-3 col-lg-3 mb-4 col-6 text-center\">' +
-             '<div class=\"product-entry border\">' +
-             '<div class=\"desc\">' +
-             '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
-             '</div>' +
-             '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
-             '<img src="' + arr[i].img + '" class=\"img-fluid\" alt=\"product image\">' +
-             '</a>' +
-             '<div class=\"desc\">' +
-             '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
-             '<span class=\"price\">' + arr[i].price +'</span>' +
-             '</div>' +
-             '</div>' +
-             '</div>';
-
-    }
-    document.getElementById("id01").innerHTML = out;
-}
 /**
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!--                THIS IS THE CALL TO ADD EVENT LISTENER TO ALL OF THE FILTER OPTIONS                                                                  -->
@@ -566,6 +491,7 @@ function getRes(){
 
 function printfilter(arr) {
     console.log("print filter called");
+    removePopovers();
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
@@ -574,20 +500,33 @@ function printfilter(arr) {
      out +=  '<div class=\"col-md-3 col-lg-3 col-6 mb-4 text-center\">' +
              '<div class=\"product-entry border\">' +
              '<div class=\"desc\">' +
-             '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + name + '</a></h2>' +
+             '<h2><a href=\"' + arr[i].link + '\">' + name + '</a></h2>' +
              '</div>' +
-             '<a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\" class=\"prod-img\">' +
+             '<a href=\"' + arr[i].link + '\" class=\"prod-img\">' +
              '<img src="' + arr[i].img + '" class=\"img-fluid product-image\" alt=\"product image\">' +
              '</a>' +
-             '<div class=\"desc\">' +
-             '<h2><a href=\"' + "../sql/forward.php?site=" + arr[i].link + "&id=" + arr[i].id + '\">' + arr[i].name + '</a></h2>' +
+             '<div class=\"desc mb-2\">' +
+             '<h2><a href=\"' + arr[i].link + '\">' + arr[i].name + '</a></h2>' +
+
              '<span class=\"price\">£' + arr[i].price +'</span>' +
+
+             '</div>' +
+             '<div class=\"col-12\" style="bottom: 0 !important; position: absolute !important;">' +
+             '<div class=\"row justify-content-start pr-4\">' +
+             '<div class=\"col-2 px-0\">' +
+             '<i id="report-button" class="icon-th-menu"' +
+                 'data-toggle="popover" data-placement="right" title="Report Listing"' +
+                 'data-content="And heres some amazing content. Its very engaging. Right?">' +
+             '</i>' +
+             '</div>' +
+             '</div>' +
              '</div>' +
              '</div>' +
              '</div>';
 
     }
     document.getElementById("id01").innerHTML = out;
+    enablePopover();
 }
 
 
@@ -690,4 +629,63 @@ function moveToPage(no){
   getRes();
   getPages();
   $('html, body').animate({ scrollTop: 0 }, 'fast');
+}
+
+/**
+<!-- -------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!--                THIS Handles the report button                                                                 -->
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------- -->
+**/
+
+function enablePopover(){
+  $('[data-toggle="popover"]').popover();
+}
+
+function removePopovers(){
+  $("[data-toggle='popover']").popover('hide');
+}
+
+$("#report-button").on('show.bs.popover', function () {
+  console.log('popover called');
+})
+
+function getReportOptions(){
+  $.ajax({
+    type: 'POST',
+    url: 'php/get_report_options.php',
+    //data: {login: login, fname: name, password: password1, status:priv},
+    success: function(response) {
+      var arr = JSON.parse(response);
+      if (arr.status == "fail"){
+        throwInvalidError("Error Getting Depots", arr.message);
+      } else{
+        var arr = JSON.parse(response);
+        updateDepotArray(arr);
+      }
+    },
+    error:function(x,e) {
+    if (x.status==0) {
+        alert('You are offline!!\n Please Check Your Network.');
+    } else if(x.status==404) {
+        alert('Requested URL not found.');
+    } else if(x.status==500) {
+        alert('Internel Server Error.');
+    } else if(e=='parsererror') {
+        alert('Error.\nParsing JSON Request failed.');
+    } else if(e=='timeout'){
+        alert('Request Time out.');
+    } else {
+        alert('Unknow Error.\n'+x.responseText);
+    }
+    }
+  });
+}
+
+function updateReportOptionsArray(arr){
+  for(var i = 0; i < arr.length; i++){
+    var temparray = {};
+    temparray['LID'] = arr[i].LID;
+    temparray['Depot_name'] = arr[i].Depot_name;
+    reportArray.push(temparray);
+  }
 }

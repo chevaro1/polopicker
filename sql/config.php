@@ -10,9 +10,9 @@ $user = "global";
 $pass = "global2020";
 $db = "polo";
 
-$user = "william";
-$pass = "VUjH2tGs7nL6xy7x";
-$db = "william";
+#$user = "william";
+#$pass = "VUjH2tGs7nL6xy7x";
+#$db = "william";
 
 $servername = "localhost";
 $username = $user;
